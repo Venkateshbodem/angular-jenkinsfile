@@ -27,7 +27,7 @@ node {
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
      //       sh 'npm install'
-            sh 'npm i -g @angular/cli'
+            sh 'sudo npm i -g @angular/cli'
         }
    }
 
