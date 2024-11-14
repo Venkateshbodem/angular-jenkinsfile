@@ -26,14 +26,14 @@ node {
 
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
-            sh 'npm install'
+     //       sh 'npm install'
             sh 'npm i -g @angular/cli'
         }
    }
 
     stage('Test') {
         withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-          sh 'npm run ng test --progress=false --watch false'
+          sh 'ng test --progress=false --watch false'
         }
         junit '**/test-results.xml'
     }
