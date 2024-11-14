@@ -24,12 +24,12 @@ node {
         //currentBuild.displayName = "#${currentBuild.number}-${env.git_commit_id_short}"
     }
 
-    stage('NPM Install') {
-        withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
+  //  stage('NPM Install') {
+    //    withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
      //       sh 'npm install'
-            sh 'sudo npm i -g @angular/cli'
-        }
-   }
+      //      sh 'sudo npm i -g @angular/cli'
+      //  }
+   //}
 
     stage('Test') {
         withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
